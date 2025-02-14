@@ -2,9 +2,8 @@
 
 #  github setup git 
 cd $HOME
-
-read -p "Inserisci il tuo nome utente git:" username
-read -p "Inserisci la tua email:" email
+read -p "Inserisci il tuo nome utente git: " username
+read -p "Inserisci la tua email: " email
 
 if [[ -z "$username" ]]; then
 	git config --global user.name "testUsername"
