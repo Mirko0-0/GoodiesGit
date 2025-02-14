@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#  github setup git 
 cd $HOME
 
 read -p "Inserisci il tuo nome utente git:" username
@@ -14,7 +15,7 @@ sleep 1
 echo "username OK!"
 
 if [ -z "$email" ]; then
-	git config --global user.email "sampleEmail@.com"
+	git config --global user.email "sampleEmail@sampleDom.com"
 else
 	git config --global user.email "$email"
 fi
@@ -30,6 +31,7 @@ git config --global alias.hist "log --pretty=format:'%C(yellow)[%ad]%C(reset) %C
 echo "set linenumbers" >> .nanorc
 
 echo "Git environment setup correctly"
+# nano line numbers
 pwd
 
 echo "set linenumbers" >> .nanorc
