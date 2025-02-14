@@ -27,11 +27,13 @@ git config --global core.autocrlf false
 
 git config --global alias.hist "log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short"
 
-echo "set linenumbers" >> .nanorc
-
-echo "Git environment setup correctly"
 # nano line numbers
 pwd
 
-echo "set linenumbers" >> .nanorc
-echo "line numbers setup correctly"
+if grep -q "set linenumbers" ~/.nanorc; then
+  echo "Line numbers already set up."
+else
+  echo "set linenumbers" >> ~/.nanorc
+  echo "Line numbers setup correctly."
+fi
+
